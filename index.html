@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script defer src="scripts/main.js"></script>
+    <title>9Bits Task</title>
+  </head>
+  <body>
+    <nav class="tabs__container">
+      <button class="tabs__link tabs__link--1 tabs__link--active" data-tab="1">
+        <span>1</span>
+        DEFINITION
+      </button>
+      <button class="tabs__link tabs__link--2" data-tab="2">
+        <span>2</span>
+        CHOOSE PRODUCTS
+      </button>
+      <button class="tabs__link tabs__link--3" data-tab="3">
+        <span>3</span>
+        EXCLUDE PRODUCTS
+      </button>
+      <div class="button__row">
+        <button
+          disabled
+          class="tabs__link tabs__link--required tabs__link--4 tabs__link--disabled"
+          data-tab="4"
+        >
+          <span>4</span>
+          BONUS PRODUCTS
+        </button>
+        <div class="tooltip__icon tooltip__icon--button">i</div>
+        <div class="tooltip__info">Lorem ipsum</div>
+      </div>
+      <div class="button__row">
+        <button
+          disabled
+          class="tabs__link tabs__link--required tabs__link--5 tabs__link--disabled"
+          data-tab="5"
+        >
+          <span>5</span>
+          PRODUCTS LIMITS
+        </button>
+        <div class="tooltip__icon tooltip__icon--button">i</div>
+        <div class="tooltip__info">Lorem ipsum</div>
+      </div>
+      <button class="tabs__link tabs__link--6" data-tab="6">
+        <span>6</span>
+        CHOOSE CLIENTS
+      </button>
+      <button class="tabs__link tabs__link--7" data-tab="7">
+        <span>7</span>
+        EXCLUDE CLIENTS
+      </button>
+      <button class="tabs__link tabs__link--8" data-tab="8">
+        <span>8</span>
+        CLIENTS LIMITS
+      </button>
+      <button form="form" class="tabs__link">
+        <span>9</span>
+        SUMMARY
+      </button>
+    </nav>
+    <main>
+      <div
+        class="tabs__content tabs__content--1 main__content tabs__content--active"
+      >
+        <section class="content__section">
+          <div>
+            <div>
+              <div class="content__header">
+                <p class="header__item">Description</p>
+                <p class="header__item header__required">
+                  &#128957; is required
+                </p>
+              </div>
+              <hr />
+              <form action="summary.html" id="form">
+                <div class="input__row">
+                  <input
+                    type="text"
+                    class="required__input marketing__input"
+                    placeholder="Marketing name"
+                  />
+                  <div class="required__asterisk">&#128957;</div>
+                  <div class="tooltip__icon">i</div>
+                  <div class="tooltip__info tooltip__info--input">
+                    Lorem ipsum
+                  </div>
+                </div>
+
+                <div class="input__row">
+                  <input
+                    type="text"
+                    class="required__input technical__input"
+                    placeholder="Technical name"
+                  />
+                  <div class="tooltip__icon">i</div>
+                  <div class="tooltip__info tooltip__info--input">
+                    Lorem ipsum
+                  </div>
+                </div>
+
+                <div class="input__row">
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    class="description__input"
+                    placeholder="Description"
+                  ></textarea>
+                  <div class="tooltip__icon">i</div>
+                  <div class="tooltip__info tooltip__info--textarea">
+                    Lorem ipsum
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div>
+              <p>Catalog promotional tutorial</p>
+              <hr />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              volutpat leo eu tempor ornare. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nam molestie auctor elit, vel
+              venenatis ipsum lobortis condimentum. Sed eget nibh magna. Donec
+              vel velit vel arcu dapibus viverra. Quisque gravida quam eu lacus
+              euismod luctus. Proin eleifend quam et posuere elementum. Aenean
+              suscipit et nibh ac venenatis. Class aptent taciti sociosqu ad
+              litora torquent per conubia nostra, per inceptos himenaeos. Cras
+              pulvinar a leo at pellentesque. Curabitur sed facilisis magna, ac
+              lacinia neque. Praesent pulvinar facilisis odio, sed rutrum nunc
+              auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              volutpat leo eu tempor ornare. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nam molestie auctor elit, vel
+              venenatis ipsum lobortis condimentum. Sed eget nibh magna. Donec
+              vel velit vel arcu dapibus viverra. Quisque gravida quam eu lacus
+              euismod luctus. Proin eleifend quam et posuere elementum. Aenean
+              suscipit et nibh ac venenatis. Class aptent taciti sociosqu ad
+              litora torquent per conubia nostra, per inceptos himenaeos. Cras
+              pulvinar a leo at pellentesque. Curabitur sed facilisis magna, ac
+              lacinia neque. Praesent pulvinar facilisis odio, sed rutrum nunc
+              auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              volutpat leo eu tempor ornare. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nam molestie auctor elit, vel
+              venenatis ipsum lobortis condimentum. Sed eget nibh magna. Donec
+              vel velit vel arcu dapibus viverra. Quisque gravida quam eu lacus
+              euismod luctus. Proin eleifend quam et posuere elementum. Aenean
+              suscipit et nibh ac venenatis. Class aptent taciti sociosqu ad
+              litora torquent per conubia nostra, per inceptos himenaeos. Cras
+              pulvinar a leo at pellentesque. Curabitur sed facilisis magna, ac
+              lacinia neque. Praesent pulvinar facilisis odio, sed rutrum nunc
+              auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+            </div>
+          </div>
+        </section>
+        <section class="content__section content__section--secondary">
+          <div>
+            <div class="content__header">
+              <p class="header__item">Conditions</p>
+              <p class="header__item header__required">&#128957; is required</p>
+            </div>
+            <hr />
+            <div class="input__row">
+              <select class="select__input select__portal">
+                <option value="portal">Portal</option>
+                <option value="portal1">Portal1</option>
+                <option value="portal2">Portal2</option>
+              </select>
+              <div class="required__asterisk">&#128957;</div>
+              <div class="tooltip__icon">i</div>
+              <div class="tooltip__info tooltip__info--input">Lorem ipsum</div>
+            </div>
+            <div class="input__row">
+              <select required class="select__input select__type">
+                <option disabled selected value="">Type</option>
+                <option value="type1">Type1</option>
+                <option value="type2">Type2</option>
+                <option value="type3">Type3</option>
+              </select>
+              <div class="required__asterisk">&#128957;</div>
+              <div class="tooltip__icon">i</div>
+              <div class="tooltip__info tooltip__info--input">Lorem ipsum</div>
+            </div>
+            <div class="input__row">
+              <input disabled type="text" placeholder="Benefit amount" />
+              <div class="tooltip__icon">i</div>
+              <div class="tooltip__info tooltip__info--input">Lorem ipsum</div>
+            </div>
+            <hr />
+            <div class="date__container">
+              <div class="input__row--date-picker">
+                <input
+                  class="date__input date__start"
+                  type="date"
+                  placeholder="Start date"
+                />
+                <div class="required__asterisk">&#128957;</div>
+              </div>
+              <div class="input__row--date-picker">
+                <input
+                  class="date__input date__end"
+                  type="date"
+                  placeholder="Start date"
+                />
+              </div>
+              <div class="tooltip__icon tooltip__icon--date">i</div>
+              <div class="tooltip__info tooltip__info--date">Lorem ipsum</div>
+            </div>
+            <div class="conditions__container">
+              <div class="conditions__item--container">
+                <div class="conditions__item--radio">
+                  <input
+                    type="radio"
+                    id="buscond"
+                    name="radioinput"
+                    class="radio__input"
+                  />
+                  <label for="buscond">Bussiness conditions</label>
+                </div>
+                <div class="conditions__item--radio">
+                  <input
+                    type="radio"
+                    id="baseprice"
+                    name="radioinput"
+                    class="radio__input"
+                  />
+                  <label for="baseprice">Base price 100%</label>
+                </div>
+                <div class="tooltip__icon">i</div>
+                <div class="tooltip__info">Lorem ipsum</div>
+              </div>
+              <div class="conditions__item--checkbox">
+                <input type="checkbox" id="connprom" />
+                <label for="connprom"> Connect with other promotions</label>
+                <div class="tooltip__icon">i</div>
+                <div class="tooltip__info">Lorem ipsum</div>
+              </div>
+              <div class="conditions__item--checkbox">
+                <input type="checkbox" id="backprom" />
+                <label for="backprom"> Back promotion</label>
+                <div class="tooltip__icon">i</div>
+                <div class="tooltip__info">Lorem ipsum</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tabs__content tabs__content--2 main__content">
+        <div class="content__header">
+          <p class="header__item">Description 2</p>
+        </div>
+        <hr />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo
+        eu tempor ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam molestie auctor elit, vel venenatis ipsum lobortis
+        condimentum. Sed eget nibh magna. Donec vel velit vel arcu dapibus
+        viverra. Quisque gravida quam eu lacus euismod luctus. Proin eleifend
+        quam et posuere elementum. Aenean suscipit et nibh ac venenatis. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras pulvinar a leo at pellentesque. Curabitur sed
+        facilisis magna, ac lacinia neque. Praesent pulvinar facilisis odio, sed
+        rutrum nunc auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+      </div>
+      <div class="tabs__content tabs__content--3 main__content">
+        <div class="content__header">
+          <p class="header__item">Description 3</p>
+        </div>
+        <hr />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo
+        eu tempor ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam molestie auctor elit, vel venenatis ipsum lobortis
+        condimentum. Sed eget nibh magna. Donec vel velit vel arcu dapibus
+        viverra. Quisque gravida quam eu lacus euismod luctus. Proin eleifend
+        quam et posuere elementum. Aenean suscipit et nibh ac venenatis. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras pulvinar a leo at pellentesque. Curabitur sed
+        facilisis magna, ac lacinia neque. Praesent pulvinar facilisis odio, sed
+        rutrum nunc auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+      </div>
+      <div class="tabs__content tabs__content--4 main__content">
+        <div class="content__header">
+          <p class="header__item">Description 4</p>
+        </div>
+        <hr />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo
+        eu tempor ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam molestie auctor elit, vel venenatis ipsum lobortis
+        condimentum. Sed eget nibh magna. Donec vel velit vel arcu dapibus
+        viverra. Quisque gravida quam eu lacus euismod luctus. Proin eleifend
+        quam et posuere elementum. Aenean suscipit et nibh ac venenatis. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras pulvinar a leo at pellentesque. Curabitur sed
+        facilisis magna, ac lacinia neque. Praesent pulvinar facilisis odio, sed
+        rutrum nunc auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+      </div>
+      <div class="tabs__content tabs__content--5 main__content">
+        <div class="content__header">
+          <p class="header__item">Description 5</p>
+        </div>
+        <hr />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo
+        eu tempor ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam molestie auctor elit, vel venenatis ipsum lobortis
+        condimentum. Sed eget nibh magna. Donec vel velit vel arcu dapibus
+        viverra. Quisque gravida quam eu lacus euismod luctus. Proin eleifend
+        quam et posuere elementum. Aenean suscipit et nibh ac venenatis. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras pulvinar a leo at pellentesque. Curabitur sed
+        facilisis magna, ac lacinia neque. Praesent pulvinar facilisis odio, sed
+        rutrum nunc auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+      </div>
+      <div class="tabs__content tabs__content--6 main__content">
+        <div class="content__header">
+          <p class="header__item">Description 6</p>
+        </div>
+        <hr />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo
+        eu tempor ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam molestie auctor elit, vel venenatis ipsum lobortis
+        condimentum. Sed eget nibh magna. Donec vel velit vel arcu dapibus
+        viverra. Quisque gravida quam eu lacus euismod luctus. Proin eleifend
+        quam et posuere elementum. Aenean suscipit et nibh ac venenatis. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras pulvinar a leo at pellentesque. Curabitur sed
+        facilisis magna, ac lacinia neque. Praesent pulvinar facilisis odio, sed
+        rutrum nunc auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+      </div>
+      <div class="tabs__content tabs__content--7 main__content">
+        <div class="content__header">
+          <p class="header__item">Description 7</p>
+        </div>
+        <hr />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo
+        eu tempor ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam molestie auctor elit, vel venenatis ipsum lobortis
+        condimentum. Sed eget nibh magna. Donec vel velit vel arcu dapibus
+        viverra. Quisque gravida quam eu lacus euismod luctus. Proin eleifend
+        quam et posuere elementum. Aenean suscipit et nibh ac venenatis. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras pulvinar a leo at pellentesque. Curabitur sed
+        facilisis magna, ac lacinia neque. Praesent pulvinar facilisis odio, sed
+        rutrum nunc auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+      </div>
+      <div class="tabs__content tabs__content--8 main__content">
+        <div class="content__header">
+          <p class="header__item">Description 8</p>
+        </div>
+        <hr />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo
+        eu tempor ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam molestie auctor elit, vel venenatis ipsum lobortis
+        condimentum. Sed eget nibh magna. Donec vel velit vel arcu dapibus
+        viverra. Quisque gravida quam eu lacus euismod luctus. Proin eleifend
+        quam et posuere elementum. Aenean suscipit et nibh ac venenatis. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras pulvinar a leo at pellentesque. Curabitur sed
+        facilisis magna, ac lacinia neque. Praesent pulvinar facilisis odio, sed
+        rutrum nunc auctor luctus. Aliquam auctor nisi ac eleifend venenatis.
+      </div>
+    </main>
+  </body>
+</html>

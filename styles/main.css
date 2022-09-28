@@ -1,0 +1,249 @@
+html {
+  box-sizing: border-box;
+  font-family: Roboto, Arial;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  margin: 20px 0 0 30px;
+}
+
+.button__row {
+  position: relative;
+}
+
+.conditions__container input {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.conditions__container .radio__input {
+  padding: 10px 0;
+}
+.conditions__item--container {
+  position: relative;
+}
+.conditions__item--radio {
+  display: inline-block;
+  padding: 8px 60px 8px 0;
+}
+.conditions__item--checkbox {
+  position: relative;
+  padding: 8px 0;
+}
+
+.content__section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
+  border-right: 3px solid white;
+}
+.content__section textarea {
+  font-family: Roboto, Arial;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  height: 140px;
+  margin-bottom: 54px;
+}
+.content__header {
+  display: flex;
+  justify-content: space-between;
+}
+.content__section--secondary {
+  margin-right: 35px;
+}
+
+.date__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__item {
+  display: inline-block;
+}
+.header__required {
+  color: rgb(179, 31, 31);
+  font-size: 11px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid white;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+input {
+  width: 100%;
+  padding: 15px 0 5px 15px;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.input__row {
+  position: relative;
+}
+.input__row--date-picker {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+}
+
+.main__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px 0;
+}
+
+p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.required__asterisk {
+  position: absolute;
+  color: rgb(179, 31, 31);
+  top: 1px;
+  right: 3px;
+  font-size: 10px;
+}
+
+select {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  padding: 15px 0 5px 15px;
+  border: none;
+  margin-bottom: 30px;
+  font-weight: bold;
+  background-image: url(/assets/arrow_icon.png);
+  background-repeat: no-repeat;
+  background-position: 670px center;
+}
+select:required:invalid {
+  color: rgb(177, 177, 177);
+}
+select option[value=""][disabled] {
+  display: none;
+}
+
+.tabs__container button {
+  font-family: Roboto, Arial;
+  padding: 0;
+}
+.tabs__link {
+  display: flex;
+  cursor: pointer;
+  border: solid white;
+  border-top: 2px;
+  border-left: 0px;
+  color: rgb(73, 73, 73);
+  background-color: rgb(243, 241, 241);
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  width: 260px;
+  text-decoration: none;
+}
+.tabs__link:hover {
+  opacity: 0.7;
+}
+.tabs__link span {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  margin-left: -21px;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabs__content {
+  display: none;
+  background-color: rgb(243, 241, 241);
+}
+.tabs__link--active {
+  border-right: 0px;
+}
+.tabs__link--active span {
+  background-color: rgb(179, 31, 31);
+}
+.tabs__link--disabled {
+  position: relative;
+  color: rgb(196, 196, 196);
+}
+.tabs__link--disabled span {
+  color: rgb(155, 155, 155);
+  background-color: rgb(224, 224, 224);
+}
+.tabs__content--active {
+  display: grid;
+}
+
+.tooltip__icon {
+  position: absolute;
+  right: -17px;
+  top: 9.5px;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: rgb(179, 31, 31);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.tooltip__icon--button {
+  top: 14.5px;
+  right: 12px;
+}
+.tooltip__icon--button--hidden {
+  display: none;
+}
+.tooltip__icon--date {
+  top: 10.5px;
+}
+.tooltip__info {
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  position: absolute;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  right: -70px;
+  z-index: 10;
+  bottom: -26px;
+}
+.tooltip__info--date {
+  bottom: 5px;
+}
+.tooltip__info--input {
+  bottom: 3px;
+}
+.tooltip__info--textarea {
+  bottom: 136px;
+}
+.tooltip__icon:hover ~ .tooltip__info {
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */
