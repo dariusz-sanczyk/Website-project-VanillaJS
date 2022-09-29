@@ -31,12 +31,16 @@ const portalValueStorage = localStorage.getItem("selectName0");
 const typeValueStorage = localStorage.getItem("selectName1");
 const startDateValueStorage = localStorage.getItem("dateValue0");
 const endDateValueStorage = localStorage.getItem("dateValue1");
+const conditionRadioValueStorageString = localStorage.getItem("radioInput0");
+const basePriceRadioValueStorageString = localStorage.getItem("radioInput1");
 const connectCheckBoxStorageString = localStorage.getItem("checkBox0");
 const backCheckBoxStorageString = localStorage.getItem("checkBox1");
 
 // Converting string to boolean
 const connectCheckBoxStorage = connectCheckBoxStorageString === "true";
 const backCheckBoxStorage = backCheckBoxStorageString === "true";
+const conditionRadioValueStorage = conditionRadioValueStorageString === "true";
+const basePriceRadioValueStorage = basePriceRadioValueStorageString === "true";
 
 //Init function getting localStorage values
 (() => {
@@ -49,6 +53,8 @@ const backCheckBoxStorage = backCheckBoxStorageString === "true";
   endDate.value = endDateValueStorage;
   connectCheckBox.checked = connectCheckBoxStorage;
   backCheckBox.checked = backCheckBoxStorage;
+  conditionRadio.checked = conditionRadioValueStorage;
+  basePriceRadio.checked = basePriceRadioValueStorage;
 
   if (marketingName.value || technicalName.value) enableTabs();
 })();
@@ -111,6 +117,11 @@ function addValueToLocalStorage(element, i, name) {
   localStorage.setItem(`${name}${i}`, value);
 }
 
+function addCheckedValueToLocalStorage(element, i, name) {
+  const value = element.checked;
+  localStorage.setItem(`${name}${i}`, value);
+}
+
 descriptionName.addEventListener("input", () => {
   addValueToLocalStorage(descriptionName, "", "description");
 });
@@ -127,17 +138,16 @@ dateInputs.forEach((inpt, i) => {
   });
 });
 
+radioInputs.forEach((inpt, i) => {
+  inpt.addEventListener("click", () => {
+    localStorage.removeItem("radioInput0");
+    localStorage.removeItem("radioInput1");
+    addCheckedValueToLocalStorage(inpt, i, "radioInput");
+  });
+});
+
 checkBoxes.forEach((inpt, i) => {
   inpt.addEventListener("change", () => {
-    const value = inpt.checked;
-    localStorage.setItem(`checkBox${i}`, value);
+    addCheckedValueToLocalStorage(inpt, i, "checkBox");
   });
 });
-
-radioInputs.forEach((inpt, i) => {
-  inpt.addEventListener("change", () => {
-    addValueToLocalStorage(inpt, i, "radioInput");
-  });
-});
-
-console.log(radioInputs);
