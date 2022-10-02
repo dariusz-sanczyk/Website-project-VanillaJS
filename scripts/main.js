@@ -22,6 +22,7 @@ const conditionRadio = document.getElementById("buscond");
 const basePriceRadio = document.getElementById("baseprice");
 const connectCheckBox = document.getElementById("connprom");
 const backCheckBox = document.getElementById("backprom");
+const submitBtn = document.querySelector(".submit__button");
 
 //LocalStorage getters
 const marketingNameStorage = localStorage.getItem("inputName0");
@@ -35,6 +36,7 @@ const conditionRadioValueStorageString = localStorage.getItem("radioInput0");
 const basePriceRadioValueStorageString = localStorage.getItem("radioInput1");
 const connectCheckBoxStorageString = localStorage.getItem("checkBox0");
 const backCheckBoxStorageString = localStorage.getItem("checkBox1");
+const namesArray = JSON.parse(localStorage.getItem("namesArr"));
 
 // Converting string to boolean
 const connectCheckBoxStorage = connectCheckBoxStorageString === "true";
@@ -42,8 +44,11 @@ const backCheckBoxStorage = backCheckBoxStorageString === "true";
 const conditionRadioValueStorage = conditionRadioValueStorageString === "true";
 const basePriceRadioValueStorage = basePriceRadioValueStorageString === "true";
 
+let names = [];
+
 //Init function getting localStorage values
 (() => {
+  if (namesArray) names = namesArray;
   marketingName.value = marketingNameStorage;
   technicalName.value = technicalNameStorage;
   descriptionName.value = descriptionNameStorage;
@@ -150,4 +155,11 @@ checkBoxes.forEach((inpt, i) => {
   inpt.addEventListener("change", () => {
     addCheckedValueToLocalStorage(inpt, i, "checkBox");
   });
+});
+
+submitBtn.addEventListener("click", () => {
+  if (marketingName.value) {
+    names.push(marketingName.value);
+    localStorage.setItem("namesArr", JSON.stringify(names));
+  }
 });

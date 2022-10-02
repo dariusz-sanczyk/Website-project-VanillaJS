@@ -175,6 +175,7 @@ select {
     text-decoration: none;
     &:hover {
       opacity: 0.7;
+      transition: opacity 0.3s;
     }
     span {
       border-radius: 50%;

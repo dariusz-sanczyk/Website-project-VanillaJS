@@ -159,6 +159,7 @@ select option[value=""][disabled] {
 }
 .tabs__link:hover {
   opacity: 0.7;
+  transition: opacity 0.3s;
 }
 .tabs__link span {
   border-radius: 50%;

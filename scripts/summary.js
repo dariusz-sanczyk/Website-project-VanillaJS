@@ -1,26 +1,51 @@
 //Selectors
-const specialOfferName = document.querySelector(".promo__name");
-const editName = document.querySelector(".edit__name");
-const deleteNameBtn = document.querySelector(".delete__button");
+const namesList = document.querySelector(".names__list");
 
 //LocalStorage getter
 const specialOfferNameValue = localStorage.getItem("inputName0");
+const namesArray = JSON.parse(localStorage.getItem("namesArr"));
 
-//Init function to get value from form
-(() => {
-  specialOfferName.innerHTML = specialOfferNameValue;
-  editName.value = specialOfferNameValue;
-})();
+//Display special offer names list
+function displayNames() {
+  namesList.innerHTML = "";
+  namesArray.forEach(function (name) {
+    const html = `<div class="grid__content"><p class="grid__cell promo__name">${name}</p>
+  <input class="edit__name"/>
+  <button class="delete__button">Delete</button>
+  </div>`;
 
-//Event handlers
-editName.addEventListener("input", (e) => {
-  const inputValue = e.target.value;
-  specialOfferName.innerHTML = inputValue;
-});
+    namesList.insertAdjacentHTML("beforeend", html);
+  });
+}
+displayNames();
 
-deleteNameBtn.addEventListener("click", () => {
-  if (confirm("Are you sure?")) {
-    specialOfferName.innerHTML = "";
-    editName.value = "";
-  }
+// Event handlers
+
+const namesListRow = document.querySelectorAll(".grid__content");
+
+function setLocalStorage(arr) {
+  localStorage.setItem("namesArr", JSON.stringify(arr));
+}
+
+namesListRow.forEach((row, i) => {
+  const name = row.querySelector(".promo__name");
+  const input = row.querySelector(".edit__name");
+  const btn = row.querySelector(".delete__button");
+
+  input.value = namesArray[i];
+
+  input.addEventListener("input", (e) => {
+    const inputValue = e.target.value;
+    name.innerHTML = inputValue;
+    namesArray[i] = inputValue;
+    setLocalStorage(namesArray);
+  });
+  btn.addEventListener("click", () => {
+    if (confirm("Are you sure?")) {
+      namesArray.splice(i, 1);
+      window.location.reload();
+    }
+    displayNames();
+    setLocalStorage(namesArray);
+  });
 });
